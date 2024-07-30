@@ -2,6 +2,8 @@ __`Focus Buddy - A Productivity Timer Web Application`__
 
 Focus Buddy is a web application designed to help you stay productive by providing a customizable focus timer, background music player, and ambient sound controls. Whether you're working, studying, or taking a break, Focus Buddy offers a serene environment to enhance your concentration and efficiency.
 
+Live at : https://simran-rm.github.io/FocusBuddy/
+
 Features:
 - Customizable Timer: Set your focus and break times according to your needs.
 - Background Video: Enjoy a soothing video background to help you relax and focus.
