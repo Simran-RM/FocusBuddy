@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focus</title>
+    <link rel="stylesheet" href="style.css" class="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <video
+      id="backgroundVideo"
+      autoplay
+      muted
+      loop
+      playsinline
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      "
+    >
+      <source src="videos/lofi_v1.mp4" type="video/mp4" />
+    </video>
+
+    <div class="container">
+
+      <div class="header">Focus Buddy!</div>
+
+      <div class="contents">
+
+        <div class="btn">
+          <button class="button back-img">Change Space</button>
+        </div>
+
+        <!-- Timer -->
+        <div class="timer" id="timerDisplay">
+          <span id="timerValue">25:00</span>
+          <span class="material-icons md-5 settings">settings</span>
+        </div>
+        
+        <div class="btn">
+          <button class="button start">Start</button>
+          <button class="button reset">Reset</button>
+          <button class="button break-btn">Break</button>
+        </div>
+        <!-- Modal -->
+
+        <div class="bg-modal">
+          <div class="modal-content">
+            <span class="modal-title">Set your Focus Time !</span>
+            <span class="material-icons md-5 close">close</span>
+
+            <br />
+            <div class="hours">
+              <label style="font-size: small">Hours:&nbsp</label>
+              <input
+                style="width: 40px"
+                type="number"
+                min="0"
+                max="24"
+                class="hourInput"
+                id="focus-hour"
+              />
+            </div>
+            <div class="minutes">
+              <label style="font-size: small">Minutes:&nbsp</label>
+              <input
+                style="width: 40px"
+                type="number"
+                min="0"
+                max="24"
+                class="minInput"
+                id="focus-min"
+              />
+            </div>
+            <div class="seconds">
+              <label style="font-size: small">Seconds:&nbsp</label>
+              <input
+                style="width: 40px"
+                type="number"
+                min="0"
+                max="24"
+                class="secInput"
+                id="focus-sec"
+              />
+            </div>
+            <div class="btn">
+              <button class="button modal-submit">Submit</button>
+            </div>
+
+            <span class="modal-break">Set your Break Time !</span>
+
+            <br />
+            <div class="hours-break">
+              <label style="font-size: small">Hours:&nbsp</label>
+              <input
+                style="width: 40px"
+                type="number"
+                min="0"
+                max="24"
+                class="hourInput"
+                id="break-hour"
+              />
+            </div>
+            <div class="minutes-break">
+              <label style="font-size: small">Minutes:&nbsp</label>
+              <input
+                style="width: 40px"
+                type="number"
+                min="0"
+                max="24"
+                class="minInput"
+                id="break-min"
+              />
+            </div>
+            <div class="seconds-break">
+              <label style="font-size: small">Seconds:&nbsp</label>
+              <input
+                style="width: 40px"
+                type="number"
+                min="0"
+                max="24"
+                class="secInput"
+                id="break-sec"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- quotes -->
+        <div class="quote">
+          <p>Believe you can and you're halfway there !</p>
+        </div>
+
+        <div class="items-secondary">
+          <!-- Music -->
+          <div class="music">
+            <iframe
+              style="border-radius: 12px"
+              src="https://open.spotify.com/embed/playlist/37i9dQZF1DX8Uebhn9wzrS?utm_source=generator&theme=0"
+              width="100%"
+              height="100%"
+              frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="task">
+            <div class="task-container">
+              <!-- sounds -->
+              <div class="sound-controls">
+                <div class="sound-control">
+                  <span class="sound-label">cafe</span>
+                  <audio controls preload="auto" loop class="audio">
+                    <source src="sounds/cafe.mp3" />
+                  </audio>
+                </div>
+
+                <div class="sound-control">
+                  <span class="sound-label">Fire</span>
+                  <audio controls preload="auto" loop class="audio">
+                    <source src="sounds/fireplace.wav" />
+                  </audio>
+                </div>
+
+                <div class="sound-control">
+                  <span class="sound-label">Forest</span>
+                  <audio controls preload="auto" loop class="audio">
+                    <source src="sounds/forest.wav" />
+                  </audio>
+                </div>
+
+                <div class="sound-control">
+                  <span class="sound-label">Rain</span>
+                  <audio controls preload="auto" loop class="audio">
+                    <source src="sounds/rain.wav" />
+                  </audio>
+                </div>
+
+                <div class="sound-control">
+                  <span class="sound-label">River</span>
+                  <audio controls preload="auto" loop class="audio">
+                    <source src="sounds/river.wav" />
+                  </audio>
+                </div>
+
+                <div class="sound-control">
+                  <span class="sound-label">Thunder</span>
+                  <audio controls preload="auto" loop class="audio">
+                    <source src="sounds/thunderstorm.wav" />
+                  </audio>
+                </div>
+
+                <div class="sound-control">
+                  <span class="sound-label">Storm</span>
+                  <audio controls preload="auto" loop class="audio">
+                    <source src="sounds/thunderstorm_rain.wav" />
+                  </audio>
+                </div>
+
+                <div class="sound-control">
+                  <span class="sound-label">Waves</span>
+                  <audio controls preload="auto" loop class="audio">
+                    <source src="sounds/waves.wav" />
+                  </audio>
+                </div>
+
+                <div class="sound-control">
+                  <span class="sound-label">Wind</span>
+                  <audio controls preload="auto" loop class="audio">
+                    <source src="sounds/wind.wav" />
+                  </audio>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
